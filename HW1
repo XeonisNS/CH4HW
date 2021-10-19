@@ -1,0 +1,37 @@
+/*Malcolm Ealy
+ * mxealy0001@student.stcc.edu
+ * 10/18/21
+ * CSC-111
+ * Homework 6 (Chapter 4)
+ * Read social security number 
+ */
+
+import java.util.Scanner;
+
+public class CH4HW1 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Please enter your social security number (without hyphens)");
+		String Ssn = input.nextLine();
+		input.close();
+		
+		boolean isValid = true;
+		isValid = Ssn.length()== 9 &&
+		Ssn.charAt(0) <= '9' && Ssn.charAt(0) >= '0' &&
+		Character.isDigit(Ssn.charAt(1)) && Character.isDigit(Ssn.charAt(2));
+				
+		if (isValid) 
+			System.out.println(Ssn + " is a correct social security number");
+		else 
+			System.out.println(Ssn + " is an invalid social security number");
+				
+			
+		}
+		
+		
+		
+		
+
+	}
